@@ -29,9 +29,6 @@ class MerchantProductApprovalDataImportConfig extends DataImportConfig
         return $this->buildImporterConfiguration($importFile, static::IMPORT_TYPE_MERCHANT_PRODUCT_APPROVAL_STATUS_DEFAULT);
     }
 
-    /**
-     * @return string
-     */
     protected function getModuleRoot(): string
     {
         return (string)realpath(
@@ -43,11 +40,6 @@ class MerchantProductApprovalDataImportConfig extends DataImportConfig
         );
     }
 
-    /**
-     * @param string $fileName
-     *
-     * @return string
-     */
     protected function getModuleDataImportDirectory(string $fileName): string
     {
         return implode(DIRECTORY_SEPARATOR, [

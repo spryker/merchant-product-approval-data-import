@@ -70,19 +70,11 @@ class MerchantProductApprovalDataImportCommunicationTester extends Actor
         $this->getMerchantPropelQuery()->filterByMerchantReference_In($references)->delete();
     }
 
-    /**
-     * @return \Orm\Zed\Merchant\Persistence\SpyMerchantQuery
-     */
     protected function getMerchantPropelQuery(): SpyMerchantQuery
     {
         return SpyMerchantQuery::create();
     }
 
-    /**
-     * @param string $fileName
-     *
-     * @return \Generated\Shared\Transfer\DataImporterConfigurationTransfer
-     */
     public function createDataImporterConfigurationTransfer(string $fileName): DataImporterConfigurationTransfer
     {
         $dataImporterReaderConfigurationTransfer = (new DataImporterReaderConfigurationTransfer())

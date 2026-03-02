@@ -58,9 +58,6 @@ class MerchantProductApprovalStatusDefaultDataImportPluginTest extends Unit
      */
     protected $plugin;
 
-    /**
-     * @return void
-     */
     protected function _before(): void
     {
         parent::_before();
@@ -103,9 +100,6 @@ class MerchantProductApprovalStatusDefaultDataImportPluginTest extends Unit
         ];
     }
 
-    /**
-     * @return void
-     */
     public function testImportThrowsExceptionWhenMerchantReferenceIsEmpty(): void
     {
         // Arrange
@@ -124,9 +118,6 @@ class MerchantProductApprovalStatusDefaultDataImportPluginTest extends Unit
         $this->plugin->import($dataImportConfigurationTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testImportThrowsExceptionWhenMerchantNotFoundByReference(): void
     {
         // Arrange
@@ -148,9 +139,6 @@ class MerchantProductApprovalStatusDefaultDataImportPluginTest extends Unit
         $this->plugin->import($dataImportConfigurationTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testImportImportsData(): void
     {
         // Arrange
@@ -190,9 +178,6 @@ class MerchantProductApprovalStatusDefaultDataImportPluginTest extends Unit
         $this->tester->assertDefaultProductAbstractApprovalStatuses($expectedDataSet);
     }
 
-    /**
-     * @return void
-     */
     public function testGetImportTypeReturnsTypeOfImporter(): void
     {
         // Assert

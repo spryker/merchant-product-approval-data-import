@@ -35,17 +35,11 @@ class MerchantProductApprovalDataImportBusinessFactory extends DataImportBusines
         return $dataImporter;
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createApprovalStatusValidationStep(): DataImportStepInterface
     {
         return new ApprovalStatusValidationStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createMerchantProductApprovalStatusDefaultWriterStep(): DataImportStepInterface
     {
         return new MerchantProductApprovalStatusDefaultWriterStep();
