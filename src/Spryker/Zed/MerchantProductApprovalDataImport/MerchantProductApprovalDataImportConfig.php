@@ -13,6 +13,8 @@ use Spryker\Zed\DataImport\DataImportConfig;
 class MerchantProductApprovalDataImportConfig extends DataImportConfig
 {
     /**
+     * @api
+     *
      * @var string
      */
     public const IMPORT_TYPE_MERCHANT_PRODUCT_APPROVAL_STATUS_DEFAULT = 'merchant-product-approval-status-default';
